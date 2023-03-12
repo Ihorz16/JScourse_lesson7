@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>Задача 3</h3>
+	<p>Створити окремі функції, які для 4 чисел знаходять:
+		1)суму;
+		2)добуток;
+		3)середнє арифметичне;
+		4)мінімальне значення.
+	</p>
+	<script>
+		function getSum(num_1, num_2, num_3, num_4) {
+			return num_1 + num_2 + num_3 + num_4
+		}
+		function getProduct(num_1, num_2, num_3, num_4) {
+			return num_1 * num_2 * num_3 * num_4
+		}
+		function getAverage(num_1, num_2, num_3, num_4) {
+			return (num_1 + num_2 + num_3 + num_4) / 4
+		}
+		function getMinValue(num_1, num_2, num_3, num_4) {
+			let minValue = num_1
+			if (minValue > num_2) minValue = num_2
+			if (minValue > num_3) minValue = num_3
+			if (minValue > num_4) minValue = num_4
+			return minValue
+		}
+		// Вводимо необхідні значення
+		const firstNum = parseFloat(prompt('Введіть 1 число'))
+		const secondNum = parseFloat(prompt('Введіть 2 число'))
+		const thirdNum = parseFloat(prompt('Введіть 3 число'))
+		const fourthNum = parseFloat(prompt('Введіть 4 число'))
+		// Виводимо результат
+		document.write(`Сума =${getSum(firstNum, secondNum, thirdNum, fourthNum)}<br>`)
+		document.write(`Добуток= ${getProduct(firstNum, secondNum, thirdNum, fourthNum)}<br>`)
+		document.write(`Середнє арифметичне= ${getAverage(firstNum, secondNum, thirdNum, fourthNum)}<br>`)
+		document.write(`Мінімальне значення = ${getMinValue(firstNum, secondNum, thirdNum, fourthNum)}`)
+	</script>
+
+</body>
+
+</html>

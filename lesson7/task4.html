@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>Задача 4</h3>
+	<p>Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість
+		додатних, кількість більших за 100.</p>
+	<script>
+
+		function get_Even_Positive_Greater100() {
+			let evenNumbers = 0
+			let positiveNumbers = 0
+			let greater100Numbers = 0
+			for (let i = 0; i < arguments.length; i++) {
+				if (arguments[i] % 2 === 0) evenNumbers++
+				if (arguments[i] > 0) positiveNumbers++
+				if (arguments[i] > 100) greater100Numbers++
+			}
+			return `кількість парних =${evenNumbers},<br> кількість додатних =${positiveNumbers},<br> кількість більших за 100= ${greater100Numbers}`
+		}
+		const firstNum = parseFloat(prompt('Введіть 1 число'))
+		const secondNum = parseFloat(prompt('Введіть 2 число'))
+		const thirdNum = parseFloat(prompt('Введіть 3 число'))
+
+		document.write(get_Even_Positive_Greater100(firstNum, secondNum, thirdNum))
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>Задача 9</h3>
+	<p>Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних
+		показів температури.</p>
+	<script>
+		function getNegativeTeperaturesNumber() {
+			let negativeTemperaturesNumber = 0
+			for (let i = 0; i < arguments.length; i++) {
+				if (arguments[i] < 0)
+					negativeTemperaturesNumber++
+			}
+			return negativeTemperaturesNumber
+		}
+		let result = getNegativeTeperaturesNumber(-10, 17, 10, -7, -2)
+		alert(`Від'ємних показів температур = ${result}`)
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>Задача 8</h3>
+	<p>Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо
+		при
+		кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a></p>
+	<script>
+		function createBanner(img, tittle, href) {
+			document.write(`<h2>${tittle}</h2>`)
+			document.write(`<a href ='${href}'> <img src= '${img}.png'</a>`)
+		}
+		createBanner(`./image/1`, `Watermelon`, `https://www.google.com/search?q=watermelon&oq=water&aqs=chrome.0.0i67i355i433j46i67i433l2j0i131i433i512j46i67l2j0i512j0i131i433j0i512.2165j0j7&sourceid=chrome&ie=UTF-8`)
+
+	</script>
+
+</body>
+
+</html>

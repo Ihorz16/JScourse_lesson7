@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>Задача 6</h3>
+	<p>Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим
+		фіксованим повідомленням).</p>
+	<script>
+		function getTableWithText(rowsNumber, columnsNumber, fixedText) {
+			document.write(`<table border ='2px'>`)
+			//1) створюємо рядки за допомогою цикла
+			for (let i = 0; i < rowsNumber; i++) {
+				document.write('<tr>')
+				// 2) створюємо стовпці
+				for (let j = 0; j < columnsNumber; j++) {
+					document.write(`<td>${fixedText}</td>`)
+
+				}
+				document.write(`</tr>`)
+			}
+			document.write(`</table>`)
+		}
+		const userRowsNum = parseInt(prompt('Введіть кількість рядків'))
+		const userColumnsNum = parseInt(prompt('Введіть кількість стовпців'))
+		const userText = prompt('Введіть повідомлення')
+
+		getTableWithText(userRowsNum, userColumnsNum, userText)
+
+	</script>
+</body>
+
+</html>
